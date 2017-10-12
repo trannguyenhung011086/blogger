@@ -12,6 +12,8 @@ def get_credentials():
     flow = flow_from_clientsecrets(
         'credentials.json', scope,
         redirect_uri=redirect_uri)
+    flow.params['access_type'] = 'offline'         # offline access
+    flow.params['include_granted_scopes'] = True   # incremental auth
     storage = Storage('credentials.dat')
     credentials = storage.get()
 
