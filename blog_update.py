@@ -1,26 +1,30 @@
 from oauth2client.client import flow_from_clientsecrets
 from oauth2client.tools import run_flow
+from oauth2client.file import Storage
 import httplib2
 from apiclient.discovery import build
-from oauth2client.file import Storage
 import webbrowser
+
 
 def get_credentials():
     scope = 'https://www.googleapis.com/auth/blogger'
+    redirect_uri = 'http://localhost:8080/'
     flow = flow_from_clientsecrets(
         'credentials.json', scope,
-        redirect_uri='http://freewebgame360.blogspot.com/oauth2callback')
+        redirect_uri=redirect_uri)
     storage = Storage('credentials.dat')
     credentials = storage.get()
 
-    if  not credentials or credentials.invalid:
-        auth_uri = flow.step1_get_authorize_url()
+    if not credentials or credentials.invalid:
+        # auth_uri = flow.step1_get_authorize_url()
         # webbrowser.open(auth_uri)
         # auth_code = raw_input('Enter the auth code: ')
-        credentials = flow.step2_exchange('4/UuEtUZaS0WXcZd9mkPUJg3b1VkA7GzECgdUzm7YP3II')
-        storage.put(credentials)
-        # credentials = run_flow(flow, storage)
+        # credentials = flow.step2_exchange(auth_code)
+        # storage.put(credentials)
+        credentials = run_flow(flow, storage)
+
     return credentials
+
 
 def get_service():
     """Returns an authorised blogger api service."""
@@ -30,26 +34,26 @@ def get_service():
     service = build('blogger', 'v3', http=http)
     return service
 
+
 if __name__ == '__main__':
     served = get_service()
+    # get blog info
     blogs = served.blogs()
     blog_get_obj = blogs.get(blogId='8721173840693810465')
     details = blog_get_obj.execute()
     print(details)
-
-
-# The results of print will look like:
-
-# {u'description': u'Look far and wide. There are worlds to conquer.',
-#  u'id': u'8087466742945672359',
-#  u'kind': u'blogger#blog',
-#  u'locale': {u'country': u'', u'language': u'en', u'variant': u''},
-#  u'name': u'The World Around us',
-#  u'pages': {u'selfLink': u'https://www.googleapis.com/blogger/v3/blogs/1234567897894569/pages',
-#             u'totalItems': 2},
-#  u'posts': {u'selfLink': u'https://www.googleapis.com/blogger/v3/blogs/1245678992359/posts',
-#             u'totalItems': 26},
-#  u'published': u'2015-11-02T18:47:02+05:30',
-#  u'selfLink': u'https://www.googleapis.com/blogger/v3/blogs/9874652945672359',
-#  u'updated': u'2017-06-29T19:41:00+05:30',
-#  u'url': u'http://www.safarnuma.com/'}
+    # get post list
+    posts = served.posts()
+    post_get_obj = posts.list(blogId='8721173840693810465')
+    details = post_get_obj.execute()
+    print(details)
+    # body = {
+    #     'kind': 'blogger#postList',
+    #     'published': '2017-10-13T17:49:00+07:00',
+    #     'title': 'Arena of Valor – Garena prepares to launch mobile MOBA in remaining SEA countries',
+    #     'content': '<div>\n<img alt="" class="entry-thumb" src="http://mmoculture.com/wp-content/uploads/2017/10/Arena-of-Valor-696x344.jpg" height="344" title="Arena of Valor" width="696" /><br />\n[<a href="https://www.facebook.com/garena.aov/" rel="noop ener" target="_blank">Facebook page</a>] After launching separate servers in Indonesia and Thailand, Garena is finally preparing to launch Arena of Valor (AOV) in the remaining Southeast Asia countries, mainly <str ong="">Singapore</str></div>\n, <strong>Malaysia</strong>, and <strong>the Philippines</strong>, which will share a server. Known as 王者荣耀, the top downloaded and grossing mobile game in China, Arena of Val\nor is facing serious competition in Southeast Asia from the popular (but IP-infringing) Mobile Legends.\n<br />\n<div class="td-all-devices">\n</div>\n',
+    #     'labels': ['Arena of Valor', 'mobile', 'News']
+    # }
+    # add_post = posts.insert(blogId='8721173840693810465', body=body, isDraft=True, fetchImages=True, fetchBody=True)
+    # details = add_post.execute()
+    # print(details)
