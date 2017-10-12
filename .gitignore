@@ -103,3 +103,6 @@ ENV/
 # credentials
 credentials.json
 credentials.dat
+
+# vscode
+.vscode
