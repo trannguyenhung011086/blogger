@@ -17,7 +17,7 @@ def get_credentials():
         auth_uri = flow.step1_get_authorize_url()
         # webbrowser.open(auth_uri)
         # auth_code = raw_input('Enter the auth code: ')
-        credentials = flow.step2_exchange('4/hhMgOK6utmwQScf2Cgh3nv9-DZ3_hYuAzKOhc6EXsLo')
+        credentials = flow.step2_exchange('4/UuEtUZaS0WXcZd9mkPUJg3b1VkA7GzECgdUzm7YP3II')
         storage.put(credentials)
         # credentials = run_flow(flow, storage)
     return credentials
