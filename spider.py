@@ -12,3 +12,5 @@ def add_post(result):
         # call to blogger api
     except:
         raise Exception
+
+spider_run()
