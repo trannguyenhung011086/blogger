@@ -13,7 +13,7 @@ def get_credentials():
         'credentials.json', scope,
         redirect_uri=redirect_uri)
     flow.params['access_type'] = 'offline'         # offline access
-    flow.params['include_granted_scopes'] = True   # incremental auth
+    flow.params['include_granted_scopes'] = 'true'   # incremental auth
     storage = Storage('credentials.dat')
     credentials = storage.get()
 
