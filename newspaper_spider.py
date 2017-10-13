@@ -22,7 +22,7 @@ class ExtractArticles():
                 self.sources.append(source)
             print('Sources: {}'.format(self.sources))
             for source in self.sources:
-                self.paper = self.newspaper.build(source, memoize_articles = False, keep_article_html=True, verbose=True)                    
+                self.paper = self.newspaper.build(source, keep_article_html=True, verbose=True)                    
                 self.papers.append(self.paper)
             self.news_pool.set(self.papers, threads_per_source=2) # (3*2) = 6 threads total
             self.news_pool.join()
@@ -49,7 +49,7 @@ class ExtractArticles():
                     news = True
                 self.category = ####
             if review is True or preview is True or news is True:
-                self.category = self.newspaper.build(category, memoize_articles = True, keep_article_html=True, verbose=True)
+                self.category = self.newspaper.build(category, keep_article_html=True, verbose=True)
         except:
             raise Exception
 
