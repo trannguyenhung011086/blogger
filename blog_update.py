@@ -53,6 +53,7 @@ class BlogUpdate():
         posts = served.posts()
         post_get_obj = posts.list(blogId=self.blog_id)
         details = post_get_obj.execute()
+        details = details['items']
         return details
 
     def add_post(self, body):

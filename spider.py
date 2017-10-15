@@ -10,6 +10,24 @@ def spider_run():
     result = result[::-1]
     return result
 
+def check_post(result):
+    # can only check published posts, not scheduled posts
+    if len(result) > 0:
+        posts = BlogUpdate().get_posts()
+        print('Current posts: {}'.format(len(posts)))
+        post_list = []
+        for post in posts:
+            post_list.append(post['title'])
+        index = 0
+        for article in result:
+            if article['title'] in post_list:
+                print('Blog has article [{}] already'.format(article['title']))
+                result.pop(index)
+            index += 1
+        print('New posts: {}'.format(len(result)))
+    else:
+        print('No new article check')
+    return result
 
 def post_to_blog(result):
     if len(result) > 0:
@@ -35,4 +53,5 @@ def post_to_blog(result):
 
 if __name__ == '__main__':
     result = spider_run()
+    result = check_post(result)
     post_to_blog(result)
