@@ -64,6 +64,7 @@ def post_to_blog(result, blog_id):
     else:
         print('No new article add')
 
+
 def update_blog(site):
     if site == 'mmo':
         blog = Settings.blog_web360
@@ -80,6 +81,7 @@ def update_blog(site):
     result = spider_run(source)
     result = check_post(result, blog)
     # post_to_blog(result, blog)
+
 
 if __name__ == '__main__':
     update_blog('mmo')
