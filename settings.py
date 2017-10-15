@@ -7,16 +7,15 @@ class Settings():
     ]
     mmogame_domain = [
         'mmoculture.com',
-        'mmogames.com'
+        'mmogames.com',
+        'jrpgreview.com'
     ]
     retrogame_domain = [
-        'retrogamer.net'
+        'retrogamer.net',
+        'retrocollect.com'
     ]
     jp_domain = [
         'japanesetease.net'
-    ]
-    no_category = [
-        'http://mmoculture.com'
     ]
     blog_web360 = '8721173840693810465'  # webgame360
     blog_jp = '206526905694052894'  # japanese-hobby

@@ -34,6 +34,10 @@ def check_post(result, blog_id):
     return result
 
 
+def set_labels():
+    # to do
+
+
 def post_to_blog(result, blog_id):
     if len(result) > 0:
         current = time.time()
