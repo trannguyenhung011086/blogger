@@ -1,0 +1,161 @@
+{
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/bless-neowiz-will-showcase-epic-mmorpg-at-twitchcon-2017/',
+    'title': 'Bless – Neowiz will showcase epic MMORPG at TwitchCon 2017',
+    'publish_time': datetime.datetime(2017, 10, 14, 1, 7, 24, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/playerunknowns-battlegrounds-kakao-games-prepares-to-launch-korean-service/',
+    'title': 'PlayerUnknown’s Battlegrounds – Kakao Games prepares to launch Korean service',
+    'publish_time': datetime.datetime(2017, 10, 13, 22, 45, 35, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/overwatch-blizzard-takes-china-developer-to-court-over-ip-infringement/',
+    'title': 'Overwatch – Blizzard takes China developer to court over IP infringement',
+    'publish_time': datetime.datetime(2017, 10, 13, 12, 39, 24, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/warframe-plains-of-eidolon-content-update-goes-live/',
+    'title': 'Warframe – Plains of Eidolon content update goes live',
+    'publish_time': datetime.datetime(2017, 10, 13, 2, 8, 19, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/rebellious-million-arthur-mizuki-nana-performs-theme-song-for-new-mobile-mmorpg/',
+    'title': 'Rebellious Million Arthur – Mizuki Nana performs theme song for new mobile MMORPG',
+    'publish_time': datetime.datetime(2017, 10, 13, 1, 3, 39, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/09/onmyoji-netease-prepares-top-asian-mobile-game-for-western-debut/',
+    'title': 'Onmyoji – NetEase prepares top Asian mobile game for Western debut',
+    'publish_time': datetime.datetime(2017, 9, 28, 0, 48, 39, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/09/duel-of-summoners-nexon-launches-new-trading-card-game-on-steam/',
+    'title': 'Duel of Summoners – Nexon launches new trading card game on Steam',
+    'publish_time': datetime.datetime(2017, 9, 28, 0, 13, 21, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/hyper-universe-steam-early-access-now-open-to-worldwide-audience/',
+    'title': 'Hyper Universe – Steam Early Access now open to worldwide audience',
+    'publish_time': datetime.datetime(2017, 10, 2, 10, 19, 30, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/09/blizzard-gaming-giant-is-hiring-for-a-mobile-mmo-rts-game-and-more/',
+    'title': 'Blizzard – Gaming giant is hiring for a mobile MMO RTS game and more',
+    'publish_time': datetime.datetime(2017, 9, 28, 16, 54, 16, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/09/project-ex-mobile-strategy-mmo-looks-stunning-with-unreal-engine-4-graphics/',
+    'title': 'Project EX – Mobile strategy MMO looks stunning with Unreal Engine 4 graphics',
+    'publish_time': datetime.datetime(2017, 9, 29, 10, 30, 44, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/revelation-online-eternal-chasm-update-now-live-for-high-level-players/',
+    'title': 'Revelation Online – Eternal Chasm update now live for high level players',
+    'publish_time': datetime.datetime(2017, 10, 12, 22, 55, 14, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/overhit-registration-for-limited-test-begins-in-south-korea-for-unreal-engine-4-mobile-rpg/',
+    'title': 'Overhit – Registration for limited test begins in South Korea for Unreal Engine 4 mobile RPG',
+    'publish_time': datetime.datetime(2017, 10, 12, 16, 31, 58, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/secret-world-legends-explore-the-orochi-tower-in-final-tokyo-update/',
+    'title': 'Secret World Legends – Explore the Orochi Tower in final Tokyo update',
+    'publish_time': datetime.datetime(2017, 10, 12, 1, 10, 36, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/black-desert-online-halloween-update-begins-with-new-events-and-costumes/',
+    'title': 'Black Desert Online – Halloween update begins with new events and costumes',
+    'publish_time': datetime.datetime(2017, 10, 12, 1, 1, 22, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/tera-arsenal-update-arrives-with-new-endgame-dungeons/',
+    'title': 'TERA – Arsenal update arrives with new endgame dungeons',
+    'publish_time': datetime.datetime(2017, 10, 11, 2, 3, 54, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/god-eater-resonant-ops-new-mobile-game-based-on-popular-console-series-revealed/',
+    'title': 'God Eater Resonant Ops – New mobile game based on popular console series revealed',
+    'publish_time': datetime.datetime(2017, 10, 9, 17, 36, 58, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/arena-of-valor-garena-prepares-to-launch-mobile-moba-in-remaining-sea-countries/',
+    'title': 'Arena of Valor – Garena prepares to launch mobile MOBA in remaining SEA countries',
+    'publish_time': datetime.datetime(2017, 10, 7, 3, 14, 36, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/black-desert-photos-from-the-first-oasis-festival-in-taiwan/',
+    'title': 'Black Desert – Photos from the first Oasis Festival in Taiwan',
+    'publish_time': datetime.datetime(2017, 10, 5, 20, 22, 43, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/crystal-of-reunion-strategy-mobile-mmo-now-available-in-southeast-asia-and-oceania-regions/',
+    'title': 'Crystal of Re:union – Strategy mobile MMO now available in Southeast Asia and Oceania regions',
+    'publish_time': datetime.datetime(2017, 10, 4, 19, 58, 2, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/bullet-strike-battlegrounds-battle-royale-mobile-game-begins-pre-registration-in-selected-countries/',
+    'title': 'Bullet Strike: Battlegrounds – Battle royale mobile game begins pre-registration in selected countries',
+    'publish_time': datetime.datetime(2017, 10, 4, 0, 23, 8, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/dragon-project-new-co-op-mobile-action-rpg-launches-worldwide/',
+    'title': 'Dragon Project – New co-op mobile action RPG launches worldwide',
+    'publish_time': datetime.datetime(2017, 10, 3, 11, 48, 15, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/arena-of-valor-garena-prepares-to-launch-mobile-moba-in-remaining-sea-countries/#comment-48351',
+    'title': 'Arena of Valor – Garena prepares to launch mobile MOBA in remaining SEA countries',
+    'publish_time': datetime.datetime(2017, 10, 7, 3, 14, 36, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/10/arena-of-valor-garena-prepares-to-launch-mobile-moba-in-remaining-sea-countries/#comment-48347',
+    'title': 'Arena of Valor – Garena prepares to launch mobile MOBA in remaining SEA countries',
+    'publish_time': datetime.datetime(2017, 10, 7, 3, 14, 36, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/02/blade-soul-job-posting-by-publisher-hints-at-possible-sea-server/#comment-48314',
+    'title': None,
+    'publish_time': None
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/09/sword-art-online-integral-factor-new-mobile-mmorpg-revealed/#comment-48306',
+    'title': 'Sword Art Online: Integral Factor – New mobile MMORPG revealed',
+    'publish_time': datetime.datetime(2017, 9, 24, 0, 43, 46, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/07/black-desert-quick-interview-with-developer-pearl-abyss-at-chinajoy/#comment-48299',
+    'title': None,
+    'publish_time': None
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/09/fantasy-earth-genesis-new-50-vs-50-mobile-mmo-announced/',
+    'title': 'Fantasy Earth Genesis – New 50 vs 50 mobile MMO announced',
+    'publish_time': datetime.datetime(2017, 9, 21, 15, 32, 44, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/09/tera-m-game-footage-revealed-by-netmarble-in-new-features-trailers/',
+    'title': 'TERA M – Game footage revealed by Netmarble in new features trailers',
+    'publish_time': datetime.datetime(2017, 9, 20, 21, 27, 22, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/09/mu-legend-webzen-confirm-global-open-beta-date-for-action-mmorpg/',
+    'title': 'MU Legend – Webzen confirms global Open Beta date for action MMORPG',
+    'publish_time': datetime.datetime(2017, 9, 20, 0, 41, 27, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/09/sword-art-online-integral-factor-new-mobile-mmorpg-revealed/',
+    'title': 'Sword Art Online: Integral Factor – New mobile MMORPG revealed',
+    'publish_time': datetime.datetime(2017, 9, 24, 0, 43, 46, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/09/yu-gi-oh-duel-links-konami-announces-pc-version-of-popular-tcg/',
+    'title': 'Yu-Gi-Oh! Duel Links – Konami announces PC version of popular TCG',
+    'publish_time': datetime.datetime(2017, 9, 22, 22, 59, 39, tzinfo = tzoffset(None, 28800))
+}, {
+    'paper': 'mmoculture',
+    'article_url': 'http://mmoculture.com/2017/09/dynasty-warriors-the-movie-teaser-photos-of-actors-in-costumes/',
+    'title': 'Dynasty Warriors: The Movie – Teaser photos of actors in costumes',
+    'publish_time': datetime.datetime(2017, 9, 9, 15, 22, 18, tzinfo = tzoffset(None, 28800))
+}
