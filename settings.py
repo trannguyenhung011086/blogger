@@ -1,11 +1,24 @@
 
 class Settings():
-    
-    domain = [
+
+    tech_domain = [
+        'vnreview.vn',
+        'genk.vn'
+    ]
+    mmogame_domain = [
         'mmoculture.com',
-        # 'mmogames.com'
+        'mmogames.com'
+    ]
+    retrogame_domain = [
+        'retrogamer.net'
+    ]
+    jp_domain = [
+        'japanesetease.net'
     ]
     no_category = [
         'http://mmoculture.com'
     ]
-    blogID = '8721173840693810465'
+    blog_web360 = '8721173840693810465'  # webgame360
+    blog_jp = '206526905694052894'  # japanese-hobby
+    blog_gog360 = '4577944271244214701'  # gog360
+    blog_digi360 = '348170494037626348'  # Live Digital 360

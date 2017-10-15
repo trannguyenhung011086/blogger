@@ -17,15 +17,15 @@ class ExtractArticles():
         self.newspaper = newspaper
         self.news_pool = news_pool
 
-    def build_sources(self):
+    def build_sources(self, domains):
         try:
-            for domain in Settings.domain:
+            for domain in domains:
                 source = 'http://%s' % domain
                 self.sources.append(source)
             for source in self.sources:
                 self.paper = Source(source)
                 self.paper = self.newspaper.build(
-                    source, memoize_articles=True, keep_article_html=True, verbose=True)
+                    source, memoize_articles=False, keep_article_html=True, verbose=True)
                 print('Source: {} - Size: {}'.format(source, self.paper.size()))
                 self.papers.append(self.paper)
             # (3*2) = 6 threads total

@@ -9,9 +9,6 @@ from settings import Settings
 
 class BlogUpdate():
 
-    def __init__(self):
-        self.blog_id = Settings.blogID
-
     def get_credentials(self):
         scope = 'https://www.googleapis.com/auth/blogger'
         redirect_uri = 'http://localhost:8080/'
@@ -41,25 +38,25 @@ class BlogUpdate():
         service = build('blogger', 'v3', http=http)
         return service
 
-    def get_blog_info(self):
+    def get_blog_info(self, blog_id):
         served = self.get_service()
         blogs = served.blogs()
-        blog_get_obj = blogs.get(blogId=self.blog_id)
+        blog_get_obj = blogs.get(blogId=blog_id)
         details = blog_get_obj.execute()
         return details
 
-    def get_posts(self):
+    def get_posts(self, blog_id):
         served = self.get_service()
         posts = served.posts()
-        post_get_obj = posts.list(blogId=self.blog_id)
+        post_get_obj = posts.list(blogId=blog_id)
         details = post_get_obj.execute()
         details = details['items']
         return details
 
-    def add_post(self, body):
+    def add_post(self, body, blog_id):
         served = self.get_service()
         posts = served.posts()
-        add_post = posts.insert(blogId=self.blog_id,
+        add_post = posts.insert(blogId=blog_id,
                                 body=body, isDraft=False, fetchImages=True, fetchBody=True)
         details = add_post.execute()
         return details
