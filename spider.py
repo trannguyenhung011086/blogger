@@ -34,7 +34,7 @@ def check_post(result, blog_id):
     return result
 
 
-def set_labels():
+# def set_labels():
     # to do
 
 
@@ -84,11 +84,11 @@ def update_blog(site):
         source = Settings.tech_domain
     result = spider_run(source)
     result = check_post(result, blog)
-    # post_to_blog(result, blog)
+    post_to_blog(result, blog)
 
 
 if __name__ == '__main__':
-    update_blog('mmo')
-    update_blog('retro')
-    update_blog('jp')
+    # update_blog('mmo')
+    # update_blog('retro')
+    # update_blog('jp')
     update_blog('digital')

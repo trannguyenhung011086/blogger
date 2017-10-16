@@ -2,9 +2,8 @@
 class Settings():
 
     tech_domain = [
-        'vnreview.vn',
-        'genk.vn'
-    ]
+        'vnreview.vn'
+    ]    
     mmogame_domain = [
         'mmoculture.com',
         'mmogames.com',
