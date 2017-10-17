@@ -18,6 +18,7 @@ class ExtractArticles():
         self.news_pool = news_pool
 
     def build_sources(self, domains):
+        """Build sources using newspaper API to scrape from selected domains."""
         try:
             for domain in domains:
                 source = 'http://%s' % domain
@@ -28,7 +29,6 @@ class ExtractArticles():
                     source, memoize_articles=True, keep_article_html=True, verbose=True)
                 print('Source: {} - Size: {}'.format(source, self.paper.size()))
                 self.papers.append(self.paper)
-            # (3*2) = 6 threads total
             self.news_pool.set(self.papers, threads_per_source=2)
             self.news_pool.join()
             return self.papers
@@ -82,6 +82,7 @@ class ExtractArticles():
             raise Exception
 
     def remove_invalid_articles(self, pool):
+        """Remove scraped articles with duplicated or None titles."""
         try:
             title_list = []
             article_list = []

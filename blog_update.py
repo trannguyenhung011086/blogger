@@ -14,6 +14,7 @@ class BlogUpdate():
         self.labels = []
 
     def get_credentials(self):
+        """Get credentials from Google Console API. 'credentials.json' is loaded from local."""
         scope = 'https://www.googleapis.com/auth/blogger'
         redirect_uri = 'http://localhost:8080/'
         flow = flow_from_clientsecrets(
@@ -66,6 +67,7 @@ class BlogUpdate():
         return details
 
     def set_labels(self, article_url):
+        """Put scraped articles into categories based on keywords in url"""
         reg = re.compile('(//|//\w+\.)(.+\.\w+)(.*)')
         match = reg.search(article_url)
         base = match.group(2)

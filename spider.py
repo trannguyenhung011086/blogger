@@ -13,7 +13,7 @@ def spider_run(source):
 
 
 def check_post(result, blog_id):
-    # can only check published posts, not scheduled posts
+    """Only check published posts, not scheduled posts on blog."""
     if len(result) > 0:
         blog = BlogUpdate().get_blog_info(blog_id)
         print('Blog name: {}'.format(blog['name']))
@@ -35,6 +35,7 @@ def check_post(result, blog_id):
 
 
 def post_to_blog(result, blog_id):
+    """Post to blog with 6-hour interval between each post starting from current time."""
     if len(result) > 0:
         current = time.time()
         body_list = []
@@ -80,7 +81,7 @@ def update_blog(site):
 
 
 if __name__ == '__main__':
-    # update_blog('mmo')
-    # update_blog('retro')
+    update_blog('mmo')
+    update_blog('retro')
     update_blog('jp')
-    # update_blog('digital')
+    update_blog('digital')
