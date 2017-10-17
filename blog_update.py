@@ -66,7 +66,7 @@ class BlogUpdate():
         return details
 
     def set_labels(self, article_url):
-        reg = re.compile('(//|//\w+\.)(.+\.\w+)(.*)')     
+        reg = re.compile('(//|//\w+\.)(.+\.\w+)(.*)')
         match = reg.search(article_url)
         base = match.group(2)
         base = base.replace('www.', '')
@@ -133,7 +133,7 @@ class BlogUpdate():
                     self.labels.append('Simulation')
                 if 'adventure' in keyword:
                     self.labels.append('Adventure')
-                if 'news' in keyword or 'now' in keyword or 'available' in keyword or 'reveal' in keyword:
+                if 'news' in keyword or 'now' in keyword or 'available' in keyword or 'reveal' in keyword or 'announce' in keyword or 'debut' in keyword:
                     self.labels.append('News')
         elif base in Settings.tech_domain:
             self.labels = ['doi-song']
@@ -161,8 +161,26 @@ class BlogUpdate():
                     self.labels.append('Cheat Sheet')
                 if 'console' in keyword:
                     self.labels.append('Console')
-                if 'game' in keyword:
+                if 'ps1' in keyword:
+                    self.labels.append('PS1')
+                if 'ps2' in keyword:
+                    self.labels.append('PS2')
+                if 'ps3' in keyword:
+                    self.labels.append('PS3')
+                if 'ps4' in keyword:
+                    self.labels.append('PS4')
+                if '3ds' in keyword:
+                    self.labels.append('3DS')
+                if 'gamecube' in keyword:
+                    self.labels.append('Gamecube')
+                if 'dreamcast' in keyword:
+                    self.labels.append('Dreamcast')
+                if 'game' in keyword or 'gaming' in keyword:
                     self.labels.append('Game')
+                if 'rpg' in keyword:
+                    self.labels.append('RPG')
+                if 'strategy' in keyword or 'tactic' in keyword:
+                    self.labels.append('Strategy')
                 if 'hobby' in keyword or 'hobbies' in keyword:
                     self.labels.append('Hobby')
                 if 'toy' in keyword:

@@ -25,7 +25,7 @@ class ExtractArticles():
             for source in self.sources:
                 self.paper = Source(source)
                 self.paper = self.newspaper.build(
-                    source, memoize_articles=False, keep_article_html=True, verbose=True)
+                    source, memoize_articles=True, keep_article_html=True, verbose=True)
                 print('Source: {} - Size: {}'.format(source, self.paper.size()))
                 self.papers.append(self.paper)
             # (3*2) = 6 threads total
@@ -83,14 +83,17 @@ class ExtractArticles():
 
     def remove_invalid_articles(self, pool):
         try:
-            index = 0
+            title_list = []
+            article_list = []
+            print('Original articles: {}'.format(len(pool)))
             for article in pool:
                 title = article['title']
-                if title is None or len(title) == 0:
-                    print(
-                        'Found article with invalid title [{}] at index [{}]'.format(title, index))
-                    pool.pop(index)
-                index += 1
-            return pool
+                if title is None or title == "":
+                    pool.remove(article)
+                if title not in title_list:
+                    title_list.append(title)
+                    article_list.append(article)
+            print('Unique articles: {}'.format(len(article_list)))
+            return article_list
         except:
             raise Exception
