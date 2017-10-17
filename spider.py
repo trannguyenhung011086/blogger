@@ -34,27 +34,17 @@ def check_post(result, blog_id):
     return result
 
 
-# def set_labels():
-    # to do
-
-
 def post_to_blog(result, blog_id):
     if len(result) > 0:
         current = time.time()
-        labels = None
-        if blog_id == Settings.blog_web360:
-            labels = ['News']
-        elif blog_id == Settings.blog_gog360:
-            labels = ['Console']
-        elif blog_id == Settings.blog_digi360:
-            labels == ['doi-song']
-        elif blog_id == Settings.blog_jp:
-            labels == ['Culture']
+        body_list = []
         for article in result:
             convert_current = time.strftime(
                 "%Y-%m-%dT%H:%M:%S+07:00", time.localtime(current))
             title = article['title']
             content = article['content']
+            article_url = article['article_url']
+            labels = BlogUpdate().set_labels(article_url)
             body = {
                 'kind': 'blogger#postList',
                 'published': convert_current,
@@ -62,9 +52,11 @@ def post_to_blog(result, blog_id):
                 'content': content,
                 'labels': labels
             }
-            BlogUpdate().add_post(body, blog_id)
-            print('Added post with title [{}]'.format(title))
+            body_list.append(body)
             current += 21600
+        for item in body_list:
+            BlogUpdate().add_post(item, blog_id)
+            print('Added post with title [{}] and label [{}]'.format(item['title'], item['labels']))
     else:
         print('No new article add')
 
@@ -90,5 +82,5 @@ def update_blog(site):
 if __name__ == '__main__':
     # update_blog('mmo')
     # update_blog('retro')
-    # update_blog('jp')
-    update_blog('digital')
+    update_blog('jp')
+    # update_blog('digital')
