@@ -8,8 +8,7 @@ class Settings():
         'mmoculture.com'
     ]
     retrogame_domain = [
-        'retrogamer.net',
-        'retrocollect.com'
+        'retrogamer.net'
     ]
     jp_domain = [
         'japanesetease.net'
