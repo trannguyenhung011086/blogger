@@ -57,7 +57,7 @@ def post_to_blog(result, blog_id):
             current += 21600
         for item in body_list:
             BlogUpdate().add_post(item, blog_id)
-            print('Added post with title [{}] and label [{}]'.format(item['title'], item['labels']))
+            print(('Added post with title [{}] and label [{}]'.format(item['title'], item['labels'])).encode('utf-8'))
     else:
         print('No new article add')
 

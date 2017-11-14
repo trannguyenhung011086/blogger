@@ -5,7 +5,8 @@ class Settings():
         'vnreview.vn'
     ]
     mmogame_domain = [
-        'mmoculture.com'
+        'mmoculture.com',
+        'mmogames.com'
     ]
     retrogame_domain = [
         'retrogamer.net'

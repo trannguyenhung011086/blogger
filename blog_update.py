@@ -79,10 +79,8 @@ class BlogUpdate():
             for keyword in cat_keywords:
                 if 'preview' in keyword:
                     self.labels.append('Preview')
-                    self.labels.remove('News')
                 elif 'review' in keyword:
                     self.labels.append('Review')
-                    self.labels.remove('News')
                 if 'rpg' in keyword:
                     self.labels.append('RPG')
                 if 'strategy' in keyword or 'tactic' in keyword:
@@ -150,6 +148,10 @@ class BlogUpdate():
                     self.labels.append('ios')
                 if 'android' in keyword:
                     self.labels.append('android')
+                if 'apple' in keyword:
+                    self.labels.append('apple')
+                if 'samsung' in keyword:
+                    self.labels.append('samsung')
         elif base in Settings.jp_domain:
             self.labels = ['Culture']
             for keyword in cat_keywords:
