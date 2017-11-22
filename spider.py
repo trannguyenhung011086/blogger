@@ -45,7 +45,7 @@ def post_to_blog(result, blog_id):
             title = article['title']
             content = article['content']
             article_url = article['article_url']
-            labels = BlogUpdate().set_labels(article_url)
+            labels = BlogUpdate().set_labels(article_url, title)
             body = {
                 'kind': 'blogger#postList',
                 'published': convert_current,
@@ -81,7 +81,7 @@ def update_blog(site):
 
 
 if __name__ == '__main__':
-    update_blog('mmo')
+    # update_blog('mmo')
     update_blog('retro')
-    update_blog('jp')
-    update_blog('digital')
+    # update_blog('jp')
+    # update_blog('digital')
