@@ -74,18 +74,19 @@ class BlogUpdate():
         base = base.replace('www.', '')
         cat = match.group(3)
         cat_keywords = cat.split('/')
-        genre_list = ['rpg', 'strategy', 'tactic', 'action', 'card',
-                      'sport', 'moba', 'simulation', 'sim', 'casual', 'platform']
-        preview_list = ['quick look', 'first look', 'preview', 'hands-on']
+        genre_list = ['rpg', 'strategy', 'tactic', 'action', 'card', 'adventure', 'sport', 'moba',
+                      'MOBA', 'simulation', 'sim', 'casual', 'platform', 'horror', 'survival', 'mmo', 'MMO', 'puzzle']
+        preview_list = ['quick look', 'first look',
+                        'preview', 'hands-on', 'peek', 'trailer', 'spot']
         review_list = ['review']
         news_list = ['news', 'available', 'arriving', 'soon', 'update', 'upgrade', 'interview', 'information', 'confirm', 'gets', 'become', 'roll-out', 'might', 'concern', 'launch', 'invest', 'stop', 'pause', 'announce', 'reveal', 'debut', 'release', 'new', 'giveaway',
                      'gift', 'dlc', 'expansion', 'start', 'this month', 'this week', 'this year', 'goes live', 'upcoming', 'exhibit', 'showcase', 'open beta', 'closed beta', 'alpha', 'early version', 'shuts down', 'brief', 'introduce', 'singup', 'register']
         console_list = ['ps1', 'ps2', 'ps3', 'ps4', '3ds', 'gamecube',
-                        'switch', 'wiiu',  'dreamcast', 'xbox', 'pc', 'mac', 'steam', 'gog', 'sony', 'nintendo', 'atlus', 'sega', 'tecmo', 'koei', 'spike', 'falcom', 'rockstar', 'EA', 'ubisoft']
-        brand_list = ['apple', 'samsung', 'sony', 'htc',
-                      'mediatek', 'logitech', 'LG', 'nokia', 'microsoft']
-        os_list = ['windows', 'mac', 'ios', 'android', 'blackberry',
-                   'ubuntu', 'linux', 'iphone', 'ipad', 'smartwatch']
+                        'switch', 'wiiu',  'dreamcast', 'xbox', 'pc', 'mac', 'steam', 'gog']
+        brand_list = ['apple', 'samsung', 'sony', 'htc', 'mediatek', 'logitech', 'LG', 'nokia', 'microsoft',
+                      'sony', 'nintendo', 'atlus', 'sega', 'tecmo', 'koei', 'spike', 'falcom', 'rockstar', 'EA', 'ubisoft']
+        os_list = ['windows', 'mac', 'ios', 'android', 'blackberry', 'ubuntu',
+                   'linux', 'iphone', 'ipad', 'smartwatch', 'mobile', 'smartphone']
         self.labels = []
 
         if base in Settings.mmogame_domain or base in Settings.retrogame_domain:
@@ -104,7 +105,13 @@ class BlogUpdate():
                         self.labels.append(item.title())
                 for item in console_list:
                     if (item in keyword) or (item in article_title):
+                        self.labels.append(item)
+                for item in brand_list:
+                    if (item in keyword) or (item in article_title):
                         self.labels.append(item.title())
+                for item in os_list:
+                    if (item in keyword) or (item in article_title):
+                        self.labels.append(item)
 
         elif base in Settings.jp_domain:
             self.labels = ['Culture']
@@ -140,7 +147,7 @@ class BlogUpdate():
                         self.labels.append(item.title())
                 for item in os_list:
                     if (item in keyword) or (item in article_title):
-                        self.labels.append(item.title())
+                        self.labels.append(item)
 
         self.labels = list(set(self.labels))
 

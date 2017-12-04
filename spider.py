@@ -2,6 +2,7 @@ from newspaper_spider import ExtractArticles
 from blog_update import BlogUpdate
 from settings import Settings
 import time
+import random
 
 
 def spider_run(source):
@@ -35,7 +36,7 @@ def check_post(result, blog_id):
 
 
 def post_to_blog(result, blog_id):
-    """Post to blog with 6-hour interval between each post starting from current time."""
+    """Post to blog with random hour interval (3~24) between each post starting from current time."""
     if len(result) > 0:
         current = time.time()
         body_list = []
@@ -54,10 +55,11 @@ def post_to_blog(result, blog_id):
                 'labels': labels
             }
             body_list.append(body)
-            current += 21600
+            current += random.randint(10800, 86400)
         for item in body_list:
             BlogUpdate().add_post(item, blog_id)
-            print(('Added post with title [{}] and label [{}]'.format(item['title'], item['labels'])).encode('utf-8'))
+            print(('Added post with title [{}] and label [{}]'.format(
+                item['title'], item['labels'])).encode('utf-8'))
     else:
         print('No new article add')
 
@@ -81,7 +83,7 @@ def update_blog(site):
 
 
 if __name__ == '__main__':
-    # update_blog('mmo')
+    update_blog('mmo')
     update_blog('retro')
-    # update_blog('jp')
-    # update_blog('digital')
+    update_blog('jp')
+    update_blog('digital')
