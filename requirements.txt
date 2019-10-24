@@ -20,7 +20,7 @@ newspaper3k==0.2.8
 nltk==3.4.5
 onboard==1.4.1
 packaging==19.2
-Pillow==6.0.0
+Pillow==6.2.0
 pyasn1==0.4.4
 pycairo==1.18.0
 pycodestyle==2.5.0
