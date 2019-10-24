@@ -1,8 +1,10 @@
 from newspaper_spider import ExtractArticles
 from blog_update import BlogUpdate
 from settings import Settings
-import time
+import datetime
+from dateutil.tz import tzoffset
 import random
+import time
 
 
 def spider_run(source):
@@ -66,20 +68,20 @@ def post_to_blog(result, blog_id):
 
 def update_blog(site):
     if site == 'mmo':
-        blog = Settings.blog_web360
+        blog_id = Settings.blog_web360
         source = Settings.mmogame_domain
     elif site == 'retro':
-        blog = Settings.blog_gog360
+        blog_id = Settings.blog_gog360
         source = Settings.retrogame_domain
     elif site == 'jp':
-        blog = Settings.blog_jp
+        blog_id = Settings.blog_jp
         source = Settings.jp_domain
     elif site == 'digital':
-        blog = Settings.blog_digi360
+        blog_id = Settings.blog_digi360
         source = Settings.tech_domain
     result = spider_run(source)
-    result = check_post(result, blog)
-    post_to_blog(result, blog)
+    result = check_post(result, blog_id)
+    post_to_blog(result, blog_id)
 
 
 if __name__ == '__main__':
