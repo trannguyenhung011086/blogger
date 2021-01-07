@@ -14,7 +14,7 @@ feedparser==5.2.1
 idna==2.8
 jieba3k==0.35.1
 lutris==0.5.3
-lxml==4.4.1
+lxml==4.6.2
 mutagen==1.41.0
 newspaper3k==0.2.8
 nltk==3.4.5
