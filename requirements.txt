@@ -2,7 +2,7 @@ appdirs==1.4.3
 asn1crypto==0.24.0
 autopep8==1.4.4
 beautifulsoup4==4.8.1
-certifi==2018.10.15
+certifi==2022.12.7
 cffi==1.11.5
 chardet==3.0.4
 cryptography==2.7
